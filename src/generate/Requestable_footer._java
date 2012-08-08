@@ -1,0 +1,56 @@
+	;
+
+	private final String desc;
+	private final String longDesc;
+	private final String units;
+	private final DataType dataType;
+
+	Requestable(String description, String longDescription,String units,String type, String constraint){
+		this.desc=description;
+		this.longDesc=longDescription;
+		this.units=units;
+		this.dataType=translateDataType(type);
+	}
+
+	public String getInfo(){
+		return desc;
+	}
+
+	public String getDescription(){
+		return longDesc;
+	}
+
+	public String getUnits(){
+		return units;
+	}
+	
+	public DataType getDataType(){
+		return dataType;
+	}
+	
+	private final static Map<String,Requestable> upcased = new HashMap<String,Requestable>(){
+		private static final long serialVersionUID = 6000337537185037351L;
+	{
+		for (Requestable keyword:Requestable.values()){
+			this.put(keyword.name().toUpperCase(), keyword);
+		}
+	}};
+	
+	public static Requestable valueOfIgnoreCase(String keyword) throws IllegalArgumentException{
+		if (keyword==null) throw new IllegalArgumentException("Parameter can not be null");
+		Requestable result = upcased.get(keyword.toUpperCase());
+		if (result==null) throw new IllegalArgumentException("Keyword "+keyword+" is not found");
+		return result;
+	}
+	
+	private DataType translateDataType(String typeLabel){
+		if ("f".equals(typeLabel))
+			return DataType.Double;
+		else if ("s".equals(typeLabel))
+			return DataType.String;
+		else if ("i".equals(typeLabel))
+			return DataType.Integer;
+		return DataType.String;
+	}
+}
+
