@@ -19,9 +19,9 @@
 	<url>http://www.vamdc.org/documents/standards/</url>
 	
 	<scm>
-		<connection>scm:svn:http://svn.ntl.nnov.ru/misdoro/VAMDC-Dictionaries/trunk</connection>
-		<developerConnection>scm:svn:http://svn.ntl.nnov.ru/misdoro/VAMDC-Dictionaries/trunk</developerConnection>
-		<url>http://svn.ntl.nnov.ru/misdoro/VAMDC-Dictionaries/trunk</url>
+		<connection>scm:git:git@github.com:misdoro/VAMDC-Dictionaries.git</connection>
+		<url>scm:git:git@github.com:misdoro/VAMDC-Dictionaries.git</url>
+		<developerConnection>scm:git:git@github.com:misdoro/VAMDC-Dictionaries.git</developerConnection>
 	</scm>
 
 	<distributionManagement>
@@ -59,8 +59,6 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
-			
-			
 		</plugins>
 	</build>
 	
