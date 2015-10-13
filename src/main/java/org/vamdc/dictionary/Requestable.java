@@ -15,7 +15,7 @@ public enum Requestable implements Keyword{
 AtomStates( "Atomic states.", "Requesting information about atoms, including the states information.", "", "", ""),
   Atoms( "Atom information", "Requesting information about atoms, without their states.", "", "", ""),
   Collisions( "Collisional data", "collisional process data", "", "", ""),
-  Functions( "", "", "", "", ""),
+  Functions( "Request functions", "Request functions", "", "", ""),
   Methods( "Method", "method information", "", "", ""),
   MoleculeBasisStates( "The basis states for a set of molecular states expressed as a linear combination on some basis", "The basis states for a set of molecular states expressed as a linear combination on some basis", "", "", ""),
   MoleculeQuantumNumbers( "request molecule information with states and QNs", "Request the full molecule information, including states and quantum numbers.", "", "", ""),
