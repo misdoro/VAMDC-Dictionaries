@@ -3,7 +3,7 @@
 	
 	<groupId>org.vamdc</groupId>
 	<artifactId>Dictionaries</artifactId>
-	<version>12.07r2</version>
+	<version>12.07r3-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	
 	<organization>
